@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif; /* Optional: Setting font-family */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #e6e6e6;
+    float: left;
+    width: 33.33%; /* For desktop view: Each section takes equal space */
+    padding: 15px;
+}
+
+.section-title {
+    position: relative;
+    background-color: #ffcc99; /* Unique color for section title region */
+    padding: 5px;
+    color: black; /* Ensure text is easy to read */
+    font-size: 25px; /* 25% larger than dummy text font size */
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Media Queries for Tablet and Mobile Views */
+@media (max-width: 991px) {
+    .box {
+        width: 50%; /* For tablet view: 2 sections in the first row */
+    }
+
+    .box:nth-child(3) {
+        width: 100%; /* For tablet view: 3rd section takes full width in the second row */
+    }
+}
+
+@media (max-width: 767px) {
+    .box {
+        width: 100%; /* For mobile view: Each section takes full width */
+    }
+
+    .section-title {
+        font-size: 75px; /* 75% larger than dummy text font size */
+    }
+}
